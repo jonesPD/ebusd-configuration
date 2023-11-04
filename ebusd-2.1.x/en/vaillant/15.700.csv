@@ -169,6 +169,7 @@ r;w,,z1ActualRoomTempDesired,room temperature desired zone 1,,,,1400,,,tempv,,,c
 r;w,,z1Shortname,Kurzbezeichnung zone 1,,,,1600,,,shortname,,,short name of zone 1
 r;w,,z1Name1,zone 1 label (first part),,,,1700,,,zname,,,name of zone 1
 r;w,,z1Name2,zone 1 label (second part),,,,1800,,,zname,,,name of zone 1
+r1,,z1RoomHumidity,room humidity % zone1,,,,2800,,,humid,,%,room humidity % zone1
 # ##### zone 2 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000301,,,IGN:4,,,
 *w,,,,,,B524,02010301,,,,,,
@@ -192,6 +193,7 @@ r;w,,z2ActualRoomTempDesired,room temperature desired zone 2,,,,1400,,,tempv,,,c
 r;w,,z2Shortname,Kurzbezeichnung zone 2,,,,1600,,,shortname,,,short name of zone 2
 r;w,,z2Name1,zone 2 label (first part),,,,1700,,,zname,,,name of zone 2
 r;w,,z2Name2,zone 2 label (second part),,,,1800,,,zname,,,name of zone 2
+r,,z2RoomHumidity,room humidity % zone2,,,,2800,,,humid,,%,room humidity % zone2
 # ##### zone 3 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000302,,,IGN:4,,,
 *w,,,,,,B524,02010302,,,,,,
@@ -215,6 +217,7 @@ r;w,,z3ActualRoomTempDesired,room temperature desired zone 3,,,,1400,,,tempv,,,c
 r;w,,z3Shortname,shortlabel zone 3,,,,1600,,,shortname,,,short name of zone 3
 r;w,,z3Name1,label zone 3 part 1,,,,1700,,,zname,,,name of zone 3
 r;w,,z3Name2,label zone 3 part 2,,,,1800,,,zname,,,name of zone 3
+r,,z3RoomHumidity,room humidity % zone3,,,,2800,,,humid,,%,room humidity % zone3
 # ##### timers #####,,,,,,,,,,,,,
 # air,,,,,,,,,,,,,
 *r,,,,,,B524,03000001,,,IGN:1,,,whether timeslot is valid
