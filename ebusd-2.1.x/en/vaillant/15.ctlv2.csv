@@ -1,12 +1,17 @@
 # type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment,field2,part (m/s),datatypes/templates,divider/values,unit,comment,field3,part (m/s),datatypes/templates,divider/values,unit,comment
 #,,CTLV2, sensoCOMFORT VRC 720/2 (SW 0514),,,,,,,,,,
+
+# Version Conditions
+*[ctlv1],scan,,,SW,,0122
+*[ctlv2+],scan,,,SW,,>0122
+
 # ##### General #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000000,,,IGN:4,,,
 *w,,,,,,B524,02010000,,,,,,
 r,,HwcBivalencePoint,,,,,0100,,,tempv,,,Bivalence point hot water heating
 r;w,,ContinousHeating,continous heating,,,,0200,,,tempv,,,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
 r;w,,FrostOverrideTime,frost delay time,,,,0300,,,hoursum2,,,delay before frost protection is activated
-r,,xUnknown04,,,,,0400,,,HEX:*,,,
+[ctlv2+]r,,xUnknown04,,,,,0400,,,HEX:*,,,
 r;w,,GlobalSystemOff,Global System OFF,,,,0700,,,yesno,,,For switching system off
 r,,xUnknown08,,,,,0800,,,HEX:*,,,
 r,,xUnknown09,,,,,0900,,,HEX:*,,,
@@ -66,11 +71,11 @@ r;w,,PrFuelSumHcLastMonth,last months fuel consumption heating,,,,5200,,,energy4
 r;w,,PrEnergySumHcLastMonth,last months energy consumption heating,,,,5300,,,energy4,,,last month electricity consumption heating
 r;w,,PrEnergySumHwcLastMonth,last months energy consumption hot water,,,,5400,,,energy4,,,last month electricity consumption hot water
 r;w,,PrFuelSumHwcLastMonth,last months fuel consumption hot water,,,,5500,,,energy4,,,last month fuel consumption hot water
-r;w,,PrFuelSumHc,total fuel consumption heating,,,,5600,,,energy4,,,total year fuel consumption heating
+[ctlv2+]r;w,,PrFuelSumHc,total fuel consumption heating,,,,5600,,,energy4,,,total year fuel consumption heating
 r;w,,PrEnergySumHc,total energy consumption heating,,,,5700,,,energy4,,,total year electricity consumption heating
 r;w,,PrEnergySumHwc,total energy consumption hot water,,,,5800,,,energy4,,,total year electricity consumption hot water
 r;w,,PrFuelSumHwc,total fuel consumption hot water,,,,5900,,,energy4,,,total year fuel consumption hot water
-r;w,,PrEnergySum,total energy consumption,,,,5C00,,,energy4,,,total year electricity consumption
+[ctlv2+]r;w,,PrEnergySum,total energy consumption,,,,5C00,,,energy4,,,total year electricity consumption
 r;w,,PrFuelSum,total fuel consumption,,,,5D00,,,energy4,,,total year fuel consumption
 r,,xUnknown60,,,,,6000,,,HEX:*,,,
 r,,xUnknown61,,,,,6100,,,HEX:*,,,
@@ -182,10 +187,10 @@ r,,xUnknownF7,,,,,F700,,,HEX:*,,,
 r,,xUnknownF8,,,,,F800,,,HEX:*,,,
 r,,xUnknownF9,,,,,F900,,,HEX:*,,,
 r,,xUnknownFA,,,,,FA00,,,HEX:*,,,
-r,,xUnknownFB,(konstant 10),,,,FB00,,,EXP,,,
-r,,xUnknownFC,(konstant 62),,,,FC00,,,EXP,,,
-r,,xUnknownFE,(konstant 13),,,,FE00,,,EXP,,,
-r,,xUnknownFF,(konstant 25),,,,FF00,,,EXP,,,
+[ctlv2+]r,,xUnknownFB,(konstant 10),,,,FB00,,,EXP,,,
+[ctlv2+]r,,xUnknownFC,(konstant 62),,,,FC00,,,EXP,,,
+[ctlv2+]r,,xUnknownFE,(konstant 13),,,,FE00,,,EXP,,,
+[ctlv2+]r,,xUnknownFF,(konstant 25),,,,FF00,,,EXP,,,
 # ##### hot water circuit #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000100,,,IGN:4,,,
 *w,,,,,,B524,02010100,,,,,,
@@ -205,11 +210,11 @@ r,,HwcStatus,,,,,0F00,,,zoneStatus,,,
 r;w,,HwcHolidayStartTime,,,,,1000,,,HTI,,,
 r;w,,HwcHolidayEndTime,,,,,1100,,,HTI,,,
 r,,HwcUnknown12,,,,,1200,,,HEX:*,,,
-r,,HwcUnknown13,,,,,1300,,,HEX:*,,,
+[ctlv2+]r,,HwcUnknown13,,,,,1300,,,HEX:*,,,
 # ##### heating circuit 1 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000200,,,IGN:4,,,
 *w,,,,,,B524,02010200,,,,,,
-r;w,,Hc1Unknown00,,,,,0000,,,HEX:*,,,
+[ctlv2+]r;w,,Hc1Unknown00,,,,,0000,,,HEX:*,,,
 r;w,,Hc1Unknown01,,,,,0100,,,HEX:*,,,
 r,,Hc1CircuitType,CircuitType Heating Circuit 1,,,,0200,,,mctype;IGN:1,,,
 r;w,,Hc1DesiredReturnTemp,target return temperature Hc1,,,,0400,,,tempv,,,temperature for the increase in return circuit (default 30)
@@ -240,7 +245,7 @@ r,,Hc1HeatCurveAdaption,Adaptive Heatcurve Heating Circuit 1,,,,1C00,,,EXP,,,ada
 r;w,,Hc1Unknown1D,,,,,1D00,,,HEX:*,,,
 r;w,,Hc1PumpStatus,PumpStatus Heating Circuit 1,,,,1E00,,,onoff,,,pump status of zone 1
 r;w,,Hc1Unknown1F,,,,,1F00,,,HEX:*,,,
-r;w,,Hc1Unknown20,,,,,2000,,,HEX:*,,,
+[ctlv2+]r;w,,Hc1Unknown20,,,,,2000,,,HEX:*,,,
 # only 'invalid position' messages for higher registers
 # ##### heating circuit 2 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000201,,,IGN:4,,,
@@ -295,7 +300,7 @@ r;w,,Hc3PumpStatus,PumpStatus Heating Circuit 3,,,,1E00,,,onoff,,,pump status of
 # ##### zone 1 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000300,,,IGN:4,,,
 *w,,,,,,B524,02010300,,,,,,
-r;w,,z1Unknown00,,,,,0000,,,HEX:*,,,
+[ctlv2+]r;w,,z1Unknown00,,,,,0000,,,HEX:*,,,
 r;w,,z1OpModeCooling,Cooling OpMode Zone 1,,,,0100,,,opmode2,,,Cooling operation mode of zone 1
 r;w,,z1CoolingRoomTempDesiredTimeControlled,Desired Cooling Room Temperature Zone 1 time controlled,,,,0200,,,tempv,,,manual controlled desired cooling room temperature for zone 1
 r;w,,z1HolidayStartDate,,,,,0300,,,hfrom,,,start date of holidays for zone 1
@@ -330,11 +335,11 @@ r;w,,z1QuickVetoDuration,Duration of Quick Veto mode in Hours Zone 1,,,,2600,,,E
 r,,z1Unknown27,,,,,2700,,,HEX:*,,,
 r,,z1RoomHumidity,,,,,2800,,,EXP,,%,room humidity zone 1
 r,,z1Unknown29,,,,,2900,,,HEX:*,,,
-r,,z1Unknown2A,,,,,2A00,,,HEX:*,,,
-r,,z1Unknown2B,,,,,2B00,,,HEX:*,,,
-r,,z1Unknown2C,,,,,2C00,,,HEX:*,,,
-r,,z1Unknown2D,,,,,2D00,,,HEX:*,,,
-r,,z1Unknown2E,,,,,2E00,,,HEX:*,,,
+[ctlv2+]r,,z1Unknown2A,,,,,2A00,,,HEX:*,,,
+[ctlv2+]r,,z1Unknown2B,,,,,2B00,,,HEX:*,,,
+[ctlv2+]r,,z1Unknown2C,,,,,2C00,,,HEX:*,,,
+[ctlv2+]r,,z1Unknown2D,,,,,2D00,,,HEX:*,,,
+[ctlv2+]r,,z1Unknown2E,,,,,2E00,,,HEX:*,,,
 # only 'invalid position' messages for higher registers
 # ##### zone 2 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000301,,,IGN:4,,,
