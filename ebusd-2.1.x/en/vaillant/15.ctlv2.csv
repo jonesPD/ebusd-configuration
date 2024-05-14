@@ -3,7 +3,9 @@
 
 # Version Conditions
 *[ctlv1],scan,,,SW,,0122
+*[ctlv2],scan,,,SW,,0514
 *[ctlv2+],scan,,,SW,,>0122
+*[ctlv3],scan,,,SW,,0709
 
 # ##### General #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000000,,,IGN:4,,,
