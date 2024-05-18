@@ -96,7 +96,7 @@ opmode,UIN,0=off;1=auto;2=day;3=night,,
 opmode2,UIN,0=off;1=time controlled;2=manual,,
 zmapping,UIN,0=none;1=VRC7xx;2=VR9x.1;3=VR9x.2;4=VR9x.3;5=VR9x.4,,
 hcname,STR:11,,,heat circuit name
-zname,STR:5,,,zone name
+zname,STR:*,,,zone name
 shortname,STR:6,,,name
 phone,STR:9,,,phone number
 shortphone,STR:6,,,phone number
