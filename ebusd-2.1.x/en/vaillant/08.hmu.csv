@@ -51,7 +51,7 @@ r,,ThreeWayValve,,,,,0203FFFF,,,UCH,0=heating circuit;1=warm water circuit,,Thre
 r,,Fan1,,,,,1103FFFF,,,UIN,,%,Fan 1 speed (% of max),,,,,,,,,,,,,,,,,,
 r,,Fan2,,,,,1203FFFF,,,UIN,,%,Fan 2 speed (% of max),,,,,,,,,,,,,,,,,,
 r,,CondensateTrayHeater,,,,,1303FFFF,,,onoff,,,Condensate tray heater (on/off),,,,,,,,,,,,,,,,,,
-r,,4PortValve,,,,,1403FFFF,,,onoff,,,Four way valve (on/off),,,,,,,,,,,,,,,,,,
+r,,4PortValve,,,,,1403FFFF,,,UCH,0=Heating;1=Cooling,,Four way valve (on/off),,,,,,,,,,,,,,,,,,
 r,,PositionEEV,,,,,1503FFFF,,,UIN,,%,Position EEV (%),,,,,,,,,,,,,,,,,,
 r,,HeatingCoilCompressor,,,,,1703FFFF,,,onoff,,,Heating coil compressor (on/off),,,,,,,,,,,,,,,,,,
 r,,SupplyTemp,,,,,2803FFFF,,,temps2,10,°C,Supply temperature (°C),,,,,,,,,,,,,,,,,,

@@ -198,7 +198,7 @@ r,,xUnknownFA,(constant 0),,,,FA00,,,onoff,,,
 *w,,,,,,B524,02010100,,,,,,
 r;w,,HwcEnabled,,,,,0100,,,yesno,,,Indicates if Hwc is enabled/disabled
 r,,HwcCircPumpStatus,,,,,0200,,,onoff,,,Hwc circulation pump status (also turns on during a legionella run)
-r;w,,HwcOpMode,HwcOpMode,,,,0300,,,opmode2,,,Planning mode of Hwc
+r;w,,HwcOpMode,HwcOpMode,,,,0300,,,UIN,,,Planning mode of Hwc
 r;w,,HwcTempDesired,Desired Temperature Warm Water Circuit,,,,0400,,,tempv,,,setpoint of domestic hot water circuit
 r,,HwcStorageTemp,HwcStorageTemp,,,,0500,,,tempv,,,current hot water storage temperature
 r,,HwcReheatingActive,,,,,0600,,,yesno,,,Indicates ongoing hot/legionella water run
@@ -234,7 +234,7 @@ r;w,,Hc1HeatCurve,Heatcurve Heating Circuit 1,,,,0F00,,,EXP,,,heating curve of H
 r;w,,Hc1MaxHeatingFlowTempDesired,MaxFlowTempDesired Heating Circuit 1,,,,1000,,,tempv,,,maximum heating flow temperature setpoint (end emphasis) of Hc1
 r;w,,Hc1MinCoolingFlowTempDesired,,,,,1100,,,tempv,,,minimum cooling flow temperature setpoint of Hc1 
 r;w,,Hc1MinHeatingFlowTempDesired,MinFlowTempDesired Heating Circuit 1,,,,1200,,,tempv,,,minimum heating flow temperature setpoint (end emphasis) of Hc1
-r;w,,Hc1ExtHwcOpMode,ExtHwcOpMode,,,,1300,,,opmode2,,,operation mode of external Hwc circuit
+r;w,,Hc1ExtHwcOpMode,ExtHwcOpMode,,,,1300,,,UIN,,,operation mode of external Hwc circuit
 r;w,,Hc1SummerTempLimit,Switch off temperature threshold Heating Circuit 1,,,,1400,,,tempv,,,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
 r;w,,Hc1RoomTempMod,,,,,1500,,,rcmode2,,,room temperature modulation of Hc1
 r;w,,Hc1Unknown16,(konstant 0),,,,1600,,,SIN,,,
@@ -268,7 +268,7 @@ r;w,,Hc2HeatCurve,Heatingcurve Heating Circuit 2,,,,0F00,,,EXP,,,heating curve o
 r;w,,Hc2MaxHeatingFlowTempDesired,MaxFlowTempDesired Heating Circuit 2,,,,1000,,,tempv,,,maximum heating flow temperature setpoint (end emphasis) of Hc2
 r;w,,Hc2MinCoolingFlowTempDesired,,,,,1100,,,tempv,,,minimum cooling flow temperature setpoint of Hc2
 r;w,,Hc2MinHeatingFlowTempDesired,MinFlowTempDesired Heating Circuit 2,,,,1200,,,tempv,,,minimum heating flow temperature setpoint (end emphasis) of Hc2
-r;w,,Hc2ExtHwcOpMode,ExtHwcOpMode,,,,1300,,,opmode2,,,operation mode of external Hwc circuit
+r;w,,Hc2ExtHwcOpMode,ExtHwcOpMode,,,,1300,,,UIN,,,operation mode of external Hwc circuit
 r;w,,Hc2SummerTempLimit,AT-Abschaltgrenz Heating Circuit 2,,,,1400,,,tempv,,,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
 r;w,,Hc2RoomTempMod,,,,,1500,,,rcmode2,,,room temperature modulation of Hc2
 r,,Hc2ExtHwcActive,,,,,1800,,,onoff,,,
@@ -296,7 +296,7 @@ r;w,,Hc3HeatCurve,Heatcurve Heating Circuit 3,,,,0F00,,,EXP,,,heating curve of H
 r;w,,Hc3MaxHeatingFlowTempDesired,MaxFlowTempDesired Heating Circuit 3,,,,1000,,,tempv,,,maximum heating flow temperature setpoint (end emphasis) of Hc3
 r;w,,Hc3MinCoolingFlowTempDesired,,,,,1100,,,tempv,,,minimum cooling flow temperature setpoint of Hc3
 r;w,,Hc3MinHeatingFlowTempDesired,MinFlowTempDesired Heating Circuit 3,,,,1200,,,tempv,,,minimum heating flow temperature setpoint (end emphasis) of Hc3
-r;w,,Hc3ExtHwcOpMode,ExtHwcOpMode,,,,1300,,,opmode2,,,operation mode of external Hwc circuit
+r;w,,Hc3ExtHwcOpMode,ExtHwcOpMode,,,,1300,,,UIN,,,operation mode of external Hwc circuit
 r;w,,Hc3SummerTempLimit,AT-Abschaltgrenze Heating Circuit 3,,,,1400,,,tempv,,,if outside temperature > summer limit => heating is OFF;applies to comfort and night setback setpoint
 r;w,,Hc3RoomTempMod,,,,,1500,,,rcmode2,,,room temperature modulation of Hc3
 r,,Hc3ExtHwcActive,,,,,1800,,,onoff,,,
@@ -309,12 +309,12 @@ r,,Hc3PumpStatus,PumpStatus Hc3,,,,1E00,,,hcpumpstate,,,pump status of Hc3
 *r,,,,,,B524,02000300,,,IGN:4,,,
 *w,,,,,,B524,02010300,,,,,,
 [ctlv2+]r;w,,z1Unknown00,,,,,0000,,,HEX:*,,,
-r;w,,z1OpModeCooling,Cooling OpMode Zone 1,,,,0100,,,opmode2,,,Cooling operation mode of zone 1
+r;w,,z1OpModeCooling,Cooling OpMode Zone 1,,,,0100,,,UIN,,,Cooling operation mode of zone 1
 r;w,,z1CoolingRoomTempDesiredTimeControlled,Desired Cooling Room Temperature Zone 1 time controlled,,,,0200,,,tempv,,,manual controlled desired cooling room temperature for zone 1
 r;w,,z1HolidayStartDate,,,,,0300,,,hfrom,,,start date of holidays for zone 1
 r;w,,z1HolidayEndDate,,,,,0400,,,hto,,,end date of holidays for zone 1
 r;w,,z1HolidayTemp,Holiday Period Target Temperature Zone 1,,,,0500,,,tempv,,,holiday setpoint for zone 1
-r;w,,z1OpModeHeating,Heating OpMode Zone 1,,,,0600,,,opmode2,,,Heating operation mode of zone 1
+r;w,,z1OpModeHeating,Heating OpMode Zone 1,,,,0600,,,UIN,,,Heating operation mode of zone 1
 r;w,,z1QuickVetoTemp,Quick Veto Temperature Zone 1,,,,0800,,,tempv,,,manual override setpoint for zone 1
 r;w,,z1SetBackTemp,Set Back Temperature Zone 1 (time controlled heating),,,,0900,,,tempv,,,set back setpoint for zone 1
 r;w,,z1SFMode,SFMode Zone 1,,,,0E00,,,sfmode,,,modes 2=party 4=onedayaway 5=onedayhome officially not supported in VRC720
@@ -352,12 +352,12 @@ r,,z1Unknown29,,,,,2900,,,HEX:*,,,
 # ##### zone 2 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000301,,,IGN:4,,,
 *w,,,,,,B524,02010301,,,,,,
-r;w,,z2OpModeCooling,Cooling OpMode Zone 2,,,,0100,,,opmode2,,,Cooling operation mode of zone 2
+r;w,,z2OpModeCooling,Cooling OpMode Zone 2,,,,0100,,,UIN,,,Cooling operation mode of zone 2
 r;w,,z2CoolingRoomTempDesiredTimeControlled,Desired Cooling Room Temperature Zone 2 time controlled,,,,0200,,,tempv,,,manual controlled desired cooling room temperature for zone 2
 r;w,,z2HolidayStartDate,,,,,0300,,,hfrom,,,start date of holidays for zone 2
 r;w,,z2HolidayEndDate,,,,,0400,,,hto,,,end date of holidays for zone 2
 r;w,,z2HolidayTemp,Holiday Period Target Temperature Zone 2,,,,0500,,,tempv,,,holiday setpoint for zone 2
-r;w,,z2OpModeHeating,Heating OpMode Zone 2,,,,0600,,,opmode2,,,Heatingoperation mode of zone 2
+r;w,,z2OpModeHeating,Heating OpMode Zone 2,,,,0600,,,UIN,,,Heatingoperation mode of zone 2
 r;w,,z2QuickVetoTemp,Quick Veto Temperature Zone 2,,,,0800,,,tempv,,,manual override setpoint for zone 2
 r;w,,z2SetBackTemp,Set Back Temperature Zone 2 (time controlled heating),,,,0900,,,tempv,,,set back setpoint for zone 2
 r;w,,z2SFMode,SFMode Zone 2,,,,0E00,,,sfmode,,,modes 2=party 4=onedayaway 5=onedayhome officially not supported in VRC720
@@ -381,12 +381,12 @@ r,,z2RoomHumidity,,,,,2800,,,EXP,,%,room humidity zone 2
 # ##### zone 3 #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000302,,,IGN:4,,,
 *w,,,,,,B524,02010302,,,,,,
-r;w,,z3OpModeCooling,Cooling OpMode Zone 3,,,,0100,,,opmode2,,,Cooling operation mode of zone 3
+r;w,,z3OpModeCooling,Cooling OpMode Zone 3,,,,0100,,,UIN,,,Cooling operation mode of zone 3
 r;w,,z3CoolingRoomTempDesiredTimeControlled,Desired Cooling Room Temperature Zone 3 time controlled,,,,0200,,,tempv,,,manual controlled desired cooling room temperature for zone 3
 r;w,,z3HolidayStartDate,,,,,0300,,,hfrom,,,start date of holidays for zone 3
 r;w,,z3HolidayEndDate,,,,,0400,,,hto,,,end date of holidays for zone 3
 r;w,,z3HolidayTemp,Holiday Period Target Temperature Zone 3,,,,0500,,,tempv,,,holiday setpoint for zone 3
-r;w,,z3OpModeHeating,Heating OpMode Zone 3,,,,0600,,,opmode2,,,Heating operation mode of zone 3
+r;w,,z3OpModeHeating,Heating OpMode Zone 3,,,,0600,,,UIN,,,Heating operation mode of zone 3
 r;w,,z3QuickVetoTemp,Quick Veto Temperatur Zone 3,,,,0800,,,tempv,,,manual override setpoint for zone 3
 r;w,,z3SetBackTemp,Set Back Temperature Zone 3 (time controlled heating),,,,0900,,,tempv,,,set back setpoint for zone 3
 r;w,,z3SFMode,SFMode Zone 3,,,,0E00,,,sfmode,,,modes 2=party 4=onedayaway 5=onedayhome officially not supported in VRC720
