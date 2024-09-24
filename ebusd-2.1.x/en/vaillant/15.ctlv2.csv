@@ -78,7 +78,7 @@ r;w,,PrEnergySumHc,total energy consumption heating,,,,5700,,,energy4,,,total ye
 r;w,,PrEnergySumHwc,total energy consumption hot water,,,,5800,,,energy4,,,total year electricity consumption hot water
 r;w,,PrFuelSumHwc,total fuel consumption hot water,,,,5900,,,energy4,,,total year fuel consumption hot water
 [ctlv2+]r;w,,PrEnergySum,total energy consumption,,,,5C00,,,energy4,,,total year electricity consumption
-r;w,,PrFuelSum,total fuel consumption,,,,5D00,,,energy4,,,total year fuel consumption
+[ctlv2+]r;w,,PrFuelSum,total fuel consumption,,,,5D00,,,energy4,,,total year fuel consumption
 r,,xUnknown60,"(constant 12, 0 in cooling mode)",,,,6000,,,SIN,,,
 r,,xUnknown61,(constant 0),,,,6100,,,SIN,,,
 r,,xUnknown65,(constant 0),,,,6500,,,SIN,,,
