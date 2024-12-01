@@ -7,9 +7,9 @@ r,vwz,unknownMPoll10sB512h,,,76,B512,0f0001,,,HEX:*,,,Unknown poll every 10 seco
 r,,RunDataReturnFlowTemp,,,,,0609,,,tempv,,,,,,,,,,,,,,,,,,,,,
 r,,RunDataSystemPressure,,,,,7409,,,pressv,,,,,,,,,,,,,,,,,,,,,
 r,,RunDataCondensorOutletTemp,,,,,B608,,,tempv,,,,,,,,,,,,,,,,,,,,,
-r,,RunStatsVWZHours,,,,,B80B,,,UIN;IGN:2,,hours
-r,,RunStatsHcHours,,,,,B90B,,,UIN;IGN:2,,hours
-r,,RunStatsImmersionHeaterHours,,,,,BD0B,,,UIN;IGN:2,,hours
+r,,RunStatsVWZHours,,,,,B80B,,,UIN;IGN:2,,hours,,,,,,,,,,,,,,,,,,,
+r,,RunStatsHcHours,,,,,B90B,,,UIN;IGN:2,,hours,,,,,,,,,,,,,,,,,,,
+r,,RunStatsImmersionHeaterHours,,,,,BD0B,,,UIN;IGN:2,,hours,,,,,,,,,,,,,,,,,,,
 r,,RunStatsImmersionHeaterStarts,,,,,C00B,,,cntstarts2;IGN:2,,
 r,,RunStatsPrioritySwitchingValveOps,,,,,C10B,,,cntstarts2;IGN:2,,
 r,,RunStatsBuildingCircuitPumpHours,,,,,C40B,,,UIN;IGN:2,,hours
