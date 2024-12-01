@@ -3,7 +3,7 @@
 r,vwz,unknownMPoll10sB512h,,,76,B512,0f0001,,,HEX:*,,,Unknown poll every 10 seconds from CTLV2 to VWZ,,,,,,,,,,,,,,,,,,
 # END Unknown messages every 10 seconds,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ## Polls from VR921 every 10 mins,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-*r,,,,,,B509,540200,,,IGN:4,,,,,,,,,,,,,,,,,,,,,
+*r,,,,,,B509,540200,,,IGN:4,,,,,,,,,,,,,,,,,,,,,,,
 r,,RunDataReturnFlowTemp,,,,,0609,,,tempv,,,,,,,,,,,,,,,,,,,
 r,,RunDataSystemPressure,,,,,7409,,,pressv,,
 r,,RunDataCondensorOutletTemp,,,,,B608,,,tempv,,
