@@ -1,4 +1,4 @@
-# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment,field2,part (m/s),datatypes/templates,divider/values,unit,comment,field3,part (m/s),datatypes/templates,divider/values,unit,comment
+# type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment
 #,,CTLV2, sensoCOMFORT VRC 720/2 (SW 0514),,,,,,,,,,
 # ##### General #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000000,,,IGN:4,,,
