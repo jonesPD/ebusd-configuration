@@ -235,7 +235,7 @@ r,,Hc1ScreedDryingDesiredTemp,,,,,1700,,,tempv,,,current Hc1 screed drying desir
 r,,Hc1ExtHwcActive,,,,,1800,,,onoff,,,,,,,,,,,,,,,,,,,,,
 r,,Hc1ExtHeatDemand,,,,,1900,,,onoff,,,indicator of external heat demand for Hc1,,,,,,,,,,,,,,,,,,
 r,,Hc1MixerPosition,Mixer Position Heating Circuit 1,,,,1A00,,,EXP,,,"status of mixer (<0 closing, >0 opening)",,,,,,,,,,,,,,,,,,
-r;w,,Hc1Status,Status Heating Circuit 1,,,,1B00,,,UCH,,,status of zone 1
+r;w,,Hc1Status,Status Heating Circuit 1,,,,1B00,,,UCH,,,status of zone 1,,,,,,,,,,,,,,,,,,
 r,,Hc1HeatCurveAdaption,Adaptive Heatcurve Heating Circuit 1,,,,1C00,,,EXP,,,adaption applied to heating curve of Hc1,,,,,,,,,,,,,,,,,,
 r;w,,Hc1Unknown1D,(constant off),,,,1D00,,,onoff,,,,,,,,,,,,,,,,,,,,,
 r,,Hc1PumpStatus,PumpStatus Hc1,,,,1E00,,,hcpumpstate,,,pump status of Hc1,,,,,,,,,,,,,,,,,,
