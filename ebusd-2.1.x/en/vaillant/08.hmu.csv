@@ -1,5 +1,6 @@
 # type (r[1-9];w;u),circuit,name,[comment],[QQ],ZZ,PBSB,[ID],field1,part (m/s),datatypes/templates,divider/values,unit,comment,field2,part (m/s),datatypes/templates,divider/values,unit,comment,field3,part (m/s),datatypes/templates,divider/values,unit,comment,field4,part (m/s),datatypes/templates,divider/values,unit,comment
 r,hmu,Standby,,,,B503,020003,,,HEX:6,,,,,,,,,,,,,,,,,,,,,
+
 # START Unknown messages,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 r,hmu,unknownMPoll60sB507h,,,08,B507,0900,,,HEX:*,,,Unknown poll every 60 seconds from CTLV2 to HMU,,,,,,,,,,,,,,,,,,
 #r,hmu,unknownPowerModulationLevel,,,08,B507,0931,,,D1C,,%,Heatpump power modulation level (%),,,,,,,,,,,,,,,,,,
@@ -16,6 +17,7 @@ r,,unknownMB51Ah0532,,,08,,0532,,,HEX:*,,,Unknown from VWZ to HMU,,,,,,,,,,,,,,,
 r,,unknownMB513h0528,,,08,B513,0528,,,HEX:*,,,Unknown from CTLV2 to HMU,,,,,,,,,,,,,,,,,,
 r,,unknownMB509h2802,,,08,B509,2802,,,HEX:*,,,Unknown from VWZ to HMU,,,,,,,,,,,,,,,,,,
 # END Unknown messages,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
 ## Polls from VR921 every 10 mins,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 *r,,,,,,B509,540200,,,IGN:4,,,,,,,,,,,,,,,,,,,,,
 r,,RunDataCompressorSpeed,,,,,0D0A,,,EXP,,rps,,,,,,,,,,,,,,,,,,,
@@ -43,9 +45,11 @@ r,,RunStatsFan1Starts,,,,,D80B,,,cntstarts2;IGN:2,,,,,,,,,,,,,,,,,,,,,
 r,,RunStatsFan2Hours,,,,,D90B,,,UIN;IGN:2,,hours,,,,,,,,,,,,,,,,,,,
 r,,RunStatsFan2Starts,,,,,DA0B,,,cntstarts2;IGN:2,,,,,,,,,,,,,,,,,,,,,
 r,,RunDataAirIntakeTemp,,,,,DE08,,,tempv,,,,,,,,,,,,,,,,,,,,,
+
 *r,,,,,,B511,,,,,,,,,,,,,,,,,,,,,,,,,
 r,,RunStatsCompressorHc,,,,,1801,,,IGN:1;minutesum:runtime;cntstarts:cycles,,,compressor runtime in min and starts in Hc mode,,,,,,,,,,,,,,,,,,
 r,,RunStatsCompressorHwc,,,,,1802,,,IGN:1;minutesum:runtime;cntstarts:cycles,,,compressor runtime in min and starts in Hwc mode,,,,,,,,,,,,,,,,,,
+
 # Values from VWZ AI Plus Test Menu,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #(queried from WP entries Installer level/Test Menu/Sensor test),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 *r,,,,,,B514,05,,,IGN:2,,,,,,,,,,,,,,,,,,,,,
@@ -101,11 +105,13 @@ r,,hmuUnknownFFFF80,,,,,8003FFFF,,,HEX:*,,,,,,,,,,,,,,,,,,,,,
 r,,CondensorInletTemp,,,,,8103FFFF,,,temps2,10,°C,Condensor inlet temperature (°C),,,,,,,,,,,,,,,,,,
 #r,,SupplyTempImmersionHeater,,,,,8203FFFF,,,temps2,10,°C,Supply temperature electric heater (°C),,,,,,,,,,,,,,,,,,stability issues?
 # tried until 8F03FFFF,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
 # Total heating yields (only registers 01 and 02) ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 *r,,,,,,B516,,,,IGN:1,,,,,,,,,,,,,,,,,,,,,
 r,,CurrentConsumedPowerWatt,(polled every minute by VR921),,,,14,,,powerv,,,current consumed electrical power (Watt),,,,,,,,,,,,,,,,,,
 r,,YieldTotal,,,,,18,,,energy,,kWh,,,,,,,,,,,,,,,,,,,
 r,,ConsumptionTotal,,,,,19,,,energy,,,,,,,,,,,,,,,,,,,,,
+
 # Ecologic energy Yields,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 *r,,,,,,B516,1A,,,IGN:1,,,,,,,,,,,,,,,,,,,,,
 r,,YieldThisYear1,,,,,010100,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
@@ -120,6 +126,7 @@ r,,YieldThisYear9,,,,,010900,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
 r,,YieldThisYear10,,,,,010A00,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
 r,,YieldThisYear11,,,,,010B00,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
 r,,YieldThisYear12,,,,,010C00,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
+
 # Electric power consumption,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 r,,ConsumptionThisYear1,,,,,020100,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
 r,,ConsumptionThisYear2,,,,,020200,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
@@ -133,6 +140,7 @@ r,,ConsumptionThisYear9,,,,,020900,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
 r,,ConsumptionThisYear10,,,,,020A00,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
 r,,ConsumptionThisYear11,,,,,020B00,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
 r,,ConsumptionThisYear12,,,,,020C00,month,,D1B,,kWh,,,,IGN:1,,,,,,energy,,,,,,,,,
+
 *r,,,,,,B51A,05,,,IGN:3,,,,,,,,,,,,,,,,,,,,,
 *w,,,,,,B51A,06,,,,,,,,,,,,,,,,,,,,,,,,
 # FF32xx: ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -179,11 +187,13 @@ r,,PrioritySwitchingValveOps,ThreeWayValve?,,,,FF324B,,,UIN,,,,,,,,,,,,,,,,,,,,,
 r,,TotalEnergyUsage,,,,,FF324D,,,energy,,kWh,,,,,,,,,,,,,,,,,,,
 #r,,ImmersionHeaterTemp,,,,,FF325C,,,temps2,10,°C,,,,,,,,,,,,,,,,,,,stability issues?
 # tried until FF326F ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
 # FF33xx: ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 r;w,,MainsBlocktimeMinDuration,,,,,FF3319,,,UCH,,min,Minimum block time duration (in minutes),,,,,,,,,,,,,,,,,,
 r;w,,ActiveCoolingEnabled,,,,,FF331B,,,yesno,,,Active Cooling technology enabled,,,,,,,,,,,,,,,,,,
 #r,,ImmersionHeaterMode,,,,,FF331E,,,UCH,0=off;1=on,,Immersion heater mode (on/off),,,,,,,,,,,,,,,,,,stability issues?
 r;w,,CompressorCurrentLimit,,,,,FF331F,,,UCH,,A,Compressor Electric Current limitation (A),,,,,,,,,,,,,,,,,,
+
 # FF34xx: ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 r,,CompressorHours,,,,,FF3400,,,UIN,,hours,,,,,,,,,,,,,,,,,,,
 r,,CompressorStarts,,,,,FF3401,,,UIN,,,,,,,,,,,,,,,,,,,,,
@@ -204,6 +214,7 @@ r,,Fan1Hours,,,,,FF3451,,,UIN,,hours,,,,,,,,,,,,,,,,,,,
 r,,Fan1Starts,,,,,FF3452,,,UIN,,,,,,,,,,,,,,,,,,,,,
 r,,Fan2Hours,,,,,FF345E,,,UIN,,hours,,,,,,,,,,,,,,,,,,,
 r,,Fan2Starts,,,,,FF345F,,,UIN,,,,,,,,,,,,,,,,,,,,,
+
 # FF35xx: ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # Heat pump configuration menu values,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 r;w,,HeatCurve,(with integrated System thermostat),,,,FF352D,,,BCD,10,,(8F)Heat curve 0.1 to 4.0,,,,,,,,,,,,,,,,,,
@@ -217,5 +228,6 @@ r,,HwcModeActive,(with integrated System thermostat),,,,FF3535,,,UCH,0=no;1=yes,
 r,,HwcChargeHysteresis,(with integrated System thermostat),,,,FF3539,,,D2C,,K,(8F)Hysteresis Hwc charging (K),,,,,,,,,,,,,,,,,,
 r;w,,CompressorModulationType,,,,,FF353D,,,UCH,0=hard;1=soft,,Compressor Modulation type (soft/hard),,,,,,,,,,,,,,,,,,
 r,,CompressorHysteresisCooling,,,,,FF353F,,,D2C,,K,Compressor hysteresis cooling (K),,,,,,,,,,,,,,,,,,
+
 !include,hcmode.inc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 !include,errors.inc,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
