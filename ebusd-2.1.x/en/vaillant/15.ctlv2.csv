@@ -3,29 +3,29 @@
 # ##### General #####,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 *r,,,,,,B524,02000000,,,IGN:4,,,,,,,,,,,,,,,,,,,,,
 *w,,,,,,B524,02010000,,,,,,,,,,,,,,,,,,,,,,,,
-r,,HwcBivalencePoint,,,,,0100,,,tempv,,,Bivalence point hot water heating
-r;w,,ContinousHeating,continous heating,,,,0200,,,tempv,,,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)"
-r;w,,FrostOverrideTime,frost delay time,,,,0300,,,hoursum2,,,delay before frost protection is activated
-r,,xUnknown04,(constant 0),,,,0400,,,UIN,,,
-r;w,,GlobalSystemOff,Global System OFF,,,,0700,,,yesno,,,For switching system off
-r,,xUnknown08,(constant off),,,,0800,,,onoff,,,
-r,,xUnknown09,"(constant off, on in cooling mode)",,,,0900,,,onoff,,,
-r;w,,HwcParallelLoading,hwc parallel loading,,,,0A00,,,onoff,,,heating and hot water parallel
+r,,HwcBivalencePoint,,,,,0100,,,tempv,,,Bivalence point hot water heating,,,,,,,,,,,,,,,,,,
+r;w,,ContinousHeating,continous heating,,,,0200,,,tempv,,,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)",,,,,,,,,,,,,,,,,,
+r;w,,FrostOverrideTime,frost delay time,,,,0300,,,hoursum2,,,delay before frost protection is activated,,,,,,,,,,,,,,,,,,
+r,,xUnknown04,(constant 0),,,,0400,,,UIN,,,,,,,,,,,,,,,,,,
+r;w,,GlobalSystemOff,Global System OFF,,,,0700,,,yesno,,,For switching system off,,,,,,,,,,,,,,,,,,
+r,,xUnknown08,(constant off),,,,0800,,,onoff,,,,,,,,,,,,,,,,,,
+r,,xUnknown09,"(constant off, on in cooling mode)",,,,0900,,,onoff,,,,,,,,,,,,,,,,,,
+r;w,,HwcParallelLoading,hwc parallel loading,,,,0A00,,,onoff,,,heating and hot water parallel,,,,,,,,,,,,,,,,,,
 r,,xUnknown0B,(constant 0),,,,0B00,,,SIN,,,
-r;w,,MaxRoomHumidity,max room humidity,,,,0E00,,,UIN,,,maximum room humidity
-r,,HybridManager,,,,,0F00,,,UCH,0=Trivalence (tariff based);1=Bivalence (Outside temperature based),,Tri/Bi-valence manager
-r,,TariffAuxHeater,,,,,1000,,,UIN,, ,Secondary heater tariff value
+r;w,,MaxRoomHumidity,max room humidity,,,,0E00,,,UIN,,,maximum room humidity,,,,,,,,,,,,,,,,,,
+r,,HybridManager,,,,,0F00,,,UCH,0=Trivalence (tariff based);1=Bivalence (Outside temperature based),,Tri/Bi-valence manager,,,,,,,,,,,,,,,,,,
+r,,TariffAuxHeater,,,,,1000,,,UIN,, ,Secondary heater tariff value,,,,,,,,,,,,,,,,,,
 *r,,,,,,B524,,,,,,,
-r,,TariffPrimHeaterLow,,,,,020000001100,tariff_type,,UCH,, ,Tariff levels,ignore,,IGN:3,,,,low_tariff,,UIN,,,Primary heater low tariff value 
+r,,TariffPrimHeaterLow,,,,,020000001100,tariff_type,,UCH,, ,Tariff levels,ignore,,IGN:3,,,,low_tariff,,UIN,,,Primary heater low tariff value ,,,,,,,,,,,,,,,,,,
 *r,,,,,,B524,02000000,,,IGN:4,,,
 *w,,,,,,B524,02010000,,,,,,
-r,,TariffPrimHeaterNormal,,,,,1200,,,UIN,, ,Primary heater normal tariff value
+r,,TariffPrimHeaterNormal,,,,,1200,,,UIN,, ,Primary heater normal tariff value,,,,,,,,,,,,,,,,,,
 r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,
-r;w,,AdaptHeatCurve,adaptive heat curve,,,,1400,,,yesno,,,automatic correction of configured heat curve
+r;w,,AdaptHeatCurve,adaptive heat curve,,,,1400,,,yesno,,,automatic correction of configured heat curve,,,,,,,,,,,,,,,,,,
 r,,xUnknown15,"(constant 0, on in cooling mode)",,,,1500,,,onoff,,,
-r;w,,HwcMaxChargeTime,maximale hot water charging time,,,,1700,,,minutes2,,,maximum cylinder charging time
-r;w,,HwcLockTime,hwc lock time,,,,1800,,,minutes2,,,Lock time hot water current
-r;w,,SolarFlowRateQuantity,,,,,1900,,,EXP,,l/min,preset flow rate solar circuit for solar yield calculation
+r;w,,HwcMaxChargeTime,maximale hot water charging time,,,,1700,,,minutes2,,,maximum cylinder charging time,,,,,,,,,,,,,,,,,,
+r;w,,HwcLockTime,hwc lock time,,,,1800,,,minutes2,,,Lock time hot water current,,,,,,,,,,,,,,,,,,
+r;w,,SolarFlowRateQuantity,,,,,1900,,,EXP,,l/min,preset flow rate solar circuit for solar yield calculation,,,,,,,,,,,,,,,,,,
 r;w,,PumpAdditionalTime,pump additional time,,,,1B00,,,minutes2,,,chargepump additional operationtime
 r,,xUnknown1C,(constant 80),,,,1C00,,,EXP,,,
 r,,xUnknown1E,(constant on),,,,1E00,,,onoff,,,
