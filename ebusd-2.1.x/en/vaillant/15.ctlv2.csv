@@ -15,7 +15,7 @@ r,,xUnknown0B,(constant 0),,,,0B00,,,SIN,,,
 r;w,,MaxRoomHumidity,max room humidity,,,,0E00,,,UIN,,,maximum room humidity
 r,,HybridManager,,,,,0F00,,,UCH,0=Trivalence (tariff based);1=Bivalence (Outside temperature based),,Tri/Bi-valence manager
 r,,TariffAuxHeater,,,,,1000,,,UIN,, ,Secondary heater tariff value
-*r,,,,,,B524,,,,,,,,,,,,,,,,,,,,,,,,,
+*r,,,,,,B524,,,,,,,
 r,,TariffPrimHeaterLow,,,,,020000001100,tariff_type,,UCH,, ,Tariff levels,ignore,,IGN:3,,,,low_tariff,,UIN,,,Primary heater low tariff value 
 *r,,,,,,B524,02000000,,,IGN:4,,,
 *w,,,,,,B524,02010000,,,,,,
