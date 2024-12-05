@@ -6,7 +6,7 @@
 r,,HwcBivalencePoint,,,,,0100,,,tempv,,,Bivalence point hot water heating,,,,,,,,,,,,,,,,,,
 r;w,,ContinousHeating,continous heating,,,,0200,,,tempv,,,"-26=off, when the outside temperature falls below this threshold temperature the continuous heating function is started (off <=> function is disabled)",,,,,,,,,,,,,,,,,,
 r;w,,FrostOverrideTime,frost delay time,,,,0300,,,hoursum2,,,delay before frost protection is activated,,,,,,,,,,,,,,,,,,
-r,,xUnknown04,(constant 0),,,,0400,,,UIN,,,,,,,,,,,,,,,,,,
+r,,xUnknown04,(constant 0),,,,0400,,,UIN,,,,,,,,,,,,,,,,,,,,,
 r;w,,GlobalSystemOff,Global System OFF,,,,0700,,,yesno,,,For switching system off,,,,,,,,,,,,,,,,,,
 r,,xUnknown08,(constant off),,,,0800,,,onoff,,,,,,,,,,,,,,,,,,,,,
 r,,xUnknown09,"(constant off, on in cooling mode)",,,,0900,,,onoff,,,,,,,,,,,,,,,,,,,,,
