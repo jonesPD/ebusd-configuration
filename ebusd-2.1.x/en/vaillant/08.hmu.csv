@@ -103,7 +103,7 @@ r,,MA2output,,,,,7E03FFFF,,,onoff,,,Multifunction output 2: Circulation pump; an
 r,,MA0output,,,,,7F03FFFF,,,onoff,,,Multifunction output 0,,,,,,,,,,,,,,,,,,
 r,,hmuUnknownFFFF80,,,,,8003FFFF,,,HEX:*,,,,,,,,,,,,,,,,,,,,,
 r,,CondensorInletTemp,,,,,8103FFFF,,,temps2,10,°C,Condensor inlet temperature (°C),,,,,,,,,,,,,,,,,,
-r,,SupplyTempImmersionHeater,,,,,8203FFFF,,,temps2,10,°C,Supply temperature electric heater (°C),,,,,,,,,,,,,,,,,,stability issues?
+#r,,SupplyTempImmersionHeater,,,,,8203FFFF,,,temps2,10,°C,Supply temperature electric heater (°C),,,,,,,,,,,,,,,,,,stability issues?
 # tried until 8F03FFFF,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 # Total heating yields (only registers 01 and 02) ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 *r,,,,,,B516,,,,IGN:1,,,,,,,,,,,,,,,,,,,,,
@@ -175,7 +175,7 @@ r,,TotalHours,,,,,FF3240,,,UIN,,hours,,,,,,,,,,,,,,,,,,,
 r,,HcHours,,,,,FF3241,,,UIN,,hours,,,,,,,,,,,,,,,,,,,
 r,,CoolingHours,,,,,FF3243,,,UIN,,hours,,,,,,,,,,,,,,,,,,,
 r,,HwcHours,,,,,FF3244,,,UIN,,hours,,,,,,,,,,,,,,,,,,,
-r,,ImmersionHeaterHours,,,,,FF3246,,,UIN,,hours,,,,,,,,,,,,,,,,,,,stability issues?
+#r,,ImmersionHeaterHours,,,,,FF3246,,,UIN,,hours,,,,,,,,,,,,,,,,,,,stability issues?
 #r,,TotalEnergyUsageImmersionHeater,,,,,FF3249,,,UIN,,kWh,,,,,,,,,,,,,,,,,,,stability issues?
 #r,,ImmersionHeaterStarts,,,,,FF324A,,,UIN,,,,,,,,,,,,,,,,,,,,,stability issues?
 #r,,PrioritySwitchingValveOps,ThreeWayValve?,,,,FF324B,,,UIN,,,,,,,,,,,,,,,,,,,,,
