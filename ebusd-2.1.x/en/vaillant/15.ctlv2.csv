@@ -17,8 +17,6 @@ r;w,,FrostOverrideTime,frost delay time,,,,0300,,,hoursum2,,,delay before frost 
 r;w,,GlobalSystemOff,Global System OFF,,,,0700,,,yesno,,,For switching system off
 r,,xUnknown08,(constant off),,,,0800,,,onoff,,,
 r,,xUnknown09,"(constant off, on in cooling mode)",,,,0900,,,onoff,,,
-r,,xUnknown08,(constant off),,,,0800,,,onoff,,,
-r,,xUnknown09,"(constant off, on in cooling mode)",,,,0900,,,onoff,,,
 r;w,,HwcParallelLoading,hwc parallel loading,,,,0A00,,,onoff,,,heating and hot water parallel
 r,,xUnknown0B,(constant 0),,,,0B00,,,SIN,,,
 r,,xUnknown0B,(constant 0),,,,0B00,,,SIN,,,
