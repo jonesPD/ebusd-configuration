@@ -26,10 +26,7 @@ r,,TariffPrimHeaterLow,,,,,020000001100,tariff_type,,UCH,, ,Tariff levels,ignore
 *r,,,,,,B524,02000000,,,IGN:4,,,
 *w,,,,,,B524,02010000,,,,,,
 r,,TariffPrimHeaterNormal,,,,,1200,,,UIN,, ,Primary heater normal tariff value
-r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,
-r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,
 r;w,,AdaptHeatCurve,adaptive heat curve,,,,1400,,,yesno,,,automatic correction of configured heat curve
-r,,xUnknown15,"(constant 0, on in cooling mode)",,,,1500,,,onoff,,,
 r,,xUnknown15,"(constant 0, on in cooling mode)",,,,1500,,,onoff,,,
 r;w,,HwcMaxChargeTime,maximale hot water charging time,,,,1700,,,minutes2,,,maximum cylinder charging time
 r;w,,HwcLockTime,hwc lock time,,,,1800,,,minutes2,,,Lock time hot water current
@@ -37,12 +34,9 @@ r;w,,SolarFlowRateQuantity,,,,,1900,,,EXP,,l/min,preset flow rate solar circuit 
 r;w,,PumpAdditionalTime,pump additional time,,,,1B00,,,minutes2,,,chargepump additional operationtime
 r,,xUnknown1C,(constant 80),,,,1C00,,,EXP,,,
 r,,xUnknown1E,(constant on),,,,1E00,,,onoff,,,
-r,,xUnknown1C,(constant 80),,,,1C00,,,EXP,,,
-r,,xUnknown1E,(constant on),,,,1E00,,,onoff,,,
 r;w,,HcAlternativePoint,,,,,2200,,,tempv,,,exclusively alternate heating below alternative point (-21=off)
 r;w,,HcBivalencePoint,,,,,2300,,,tempv,,,Bivalence point heating
 r;w,,BackupBoiler,,,,,2400,,,backmode2,,,Function of back-up boiler (Off/Hc/Hwc/Hc+Hwc)
-r,,xUnknown25,(konstant 0),,,,2500,,,SIN,,,
 r,,xUnknown25,(konstant 0),,,,2500,,,SIN,,,
 r,,HcEmergencyTemperature,,,,,2600,,,tempv,,,Emergency operation temperature
 r;w,,HwcChargeHysteresis,hysteresis cylinder charge,,,,2700,,,calibrationv,,,hysteris storage tank loading
@@ -53,8 +47,6 @@ r;w,,MaintenanceDate,next maintenance,,,,2C00,,,date,,,date next maintenance
 r;w,,OffsetOutsideTemp,,,,,2D00,,,tempv,,K,Offset outside temperature (used to determined DisplayedOutsideTemp)
 r;w,,FM5Config,,,,,2F00,,,UIN,,,FM5 VR71 module configuration (possible range 1-11 for VRC720 and FM5 used values are 1 2 3 and 6)
 r,,xUnknown31,"(constant 0, 5 in cooling mode)",,,,3100,,,SIN,,,
-r;w,,FM5Config,,,,,2F00,,,UIN,,,FM5 VR71 module configuration (possible range 1-11 for VRC720 and FM5 used values are 1 2 3 and 6)
-r,,xUnknown31,"(constant 0, 5 in cooling mode)",,,,3100,,,SIN,,,
 r;w,,Date,date,,,,3400,,,date,,,current date
 r;w,,Time,time,,,,3500,,,HTI,,,current time
 r;w,,HydraulicScheme,system schema,,,,3600,,,UIN,,,system scheme
@@ -62,14 +54,10 @@ r;w,,CoolingOutsideTempThreshold,,,,,3800,,,tempv,,,Activate Cooling when averag
 r,,WaterPressure,water pressure,,,,3900,,,pressv,,,water pressure
 r,,DewPointOffset,,,,,3A00,,,tempv,,,Subtract from z1RoomTemp to get dew point
 r,,xUnknown3C,(constant 0),,,,3C00,,,onoff,,,
-r,,xUnknown3C,(constant 0),,,,3C00,,,onoff,,,
 r;w,,SolarYieldTotal,total solar yield,,,,3D00,,,energy4,,,solar yield total
 r;w,,YieldTotal,total environmental yield,,,,3E00,,,energy4,,,envrionment yield total
 r;w,,ESCOBlockFunction,,,,,4500,,,escomode,,,Function to deactivate when Energy Supply Company sends a blocking signal
 r;w,,HwcMaxFlowTempDesired,hwc max flow temp desired,,,,4600,,,tempv,,,maximum flow temperature setpoint of Hwc
-r,,xUnknown47,(constant off),,,,4700,,,onoff,,,
-r,,xUnknown48,"(constant 1, 0 in standby, 2 in cooling)",,,,4800,,,UIN,,,0100 before SWW run/0300 during SWW run
-r,,xUnknown4A,(constant 0),,,,4A00,,,onoff,,,
 r,,xUnknown47,(constant off),,,,4700,,,onoff,,,
 r,,xUnknown48,"(constant 1, 0 in standby, 2 in cooling)",,,,4800,,,UIN,,,0100 before SWW run/0300 during SWW run
 r,,xUnknown4A,(constant 0),,,,4A00,,,onoff,,,
@@ -101,12 +89,7 @@ r;w,,PhoneNumber1,phone number 1,,,,6F00,,,STR:*,,,installer's telephone number
 r;w,,PhoneNumber2,phone number 2,,,,7000,,,STR:*,,,installer's telephone number
 r,,DisplayedOutsideTemp,outside temperature,,,,7300,,,tempv,,,outside temperature
 r,,xUnknown75,(constant off),,,,7500,,,onoff,,,
-r,,xUnknown75,(constant off),,,,7500,,,onoff,,,
 r;w,,KeyCodeforConfigMenu,code for installer menu,,,,7600,,,UIN,,,000-999; code for the installer's menues
-r,,xUnknown77,(constant on),,,,7700,,,onoff,,,
-r,,xUnknown7E,(constant 0),,,,7E00,,,EXP,,,
-r,,xUnknown80,(constant 0),,,,8000,,,EXP,,,
-r;w,,xUnknown81,(constant 10),,,,8100,,,EXP,,,
 r,,xUnknown77,(constant on),,,,7700,,,onoff,,,
 r,,xUnknown7E,(constant 0),,,,7E00,,,EXP,,,
 r,,xUnknown80,(constant 0),,,,8000,,,EXP,,,
@@ -120,18 +103,8 @@ r,,xUnknown8C,(constant off),,,,8C00,,,onoff,,,
 r,,xUnknown8D,(constant 0),,,,8D00,,,SIN,,,
 r,,xUnknown8E,(constant 0),,,,8E00,,,SIN,,,
 r,,xUnknown8F,(constant 0),,,,8F00,,,SIN,,,
-r,,xUnknown86,(constant 60),,,,8600,,,SIN,,,
-r,,xUnknown89,(constant 15),,,,8900,,,SIN,,,
-r,,xUnknown8A,(constant 1),,,,8A00,,,EXP,,,
-r,,xUnknown8B,(constant 55),,,,8B00,,,EXP,,,
-r,,xUnknown8C,(constant off),,,,8C00,,,onoff,,,
-r,,xUnknown8D,(constant 0),,,,8D00,,,SIN,,,
-r,,xUnknown8E,(constant 0),,,,8E00,,,SIN,,,
-r,,xUnknown8F,(constant 0),,,,8F00,,,SIN,,,
 r;w,,OutsideTempAvg,average outside temperature,,,,9500,,,tempv,,,rounded average outsidetemperature (updated every 3h)
 r,,MaintenanceDue,maintenance due,,,,9600,,,yesno,,,shows whether maintenance is due
-r,,xUnknown97,(constant off),,,,9700,,,onoff,,,
-r,,xUnknown98,(constant off),,,,9800,,,onoff,,,
 r,,xUnknown97,(constant off),,,,9700,,,onoff,,,
 r,,xUnknown98,(constant off),,,,9800,,,onoff,,,
 r,,GreenIQ,,,,,9A00,,,onoff,,,Green IQ mode on thermostat
@@ -142,24 +115,7 @@ r,,HwcStorageTempBottom, storage temperature bottom,,,,9E00,,,tempv,,,temperatur
 r,,HcStorageTempTop,hc storage temperature top,,,,9F00,,,tempv,,,temperature sensor HW storage top
 r,,HcStorageTempBottom,hc storage temperature bottom,,,,A000,,,tempv,,,temperature sensor HW storage bottom
 r,,xUnknownA1,(constant off),,,,A100,,,onoff,,,
-r,,xUnknownA1,(constant off),,,,A100,,,onoff,,,
 r;w,,HwcCylinderOffset,Offset cylinder charge,,,,A200,,,calibrationv,,,Offset storage tank loading. Offset
-r,,xUnknownA5,(konstant 0),,,,A500,,,EXP,,,
-r,,xUnknownAB,(constant on),,,,AB00,,,onoff,,,
-r,,xUnknownAF,(konstant 0),,,,AF00,,,EXP,,,
-r,,xUnknownB0,(konstant 0),,,,B000,,,EXP,,,
-r,,xUnknownB1,(konstant 0),,,,B100,,,EXP,,,
-r,,xUnknownB2,(konstant 4543),,,,B200,,,HEX:*,,,
-r,,xUnknownB3,(constant off),,,,B300,,,onoff,,,
-r,,xUnknownB5,(constant on),,,,B500,,,onoff,,,
-r,,xUnknownB6,(constant off),,,,B600,,,onoff,,,
-r,,xUnknownB8,(constant off),,,,B800,,,onoff,,,
-r,,xUnknownB9,(konstant 0),,,,B900,,,EXP,,,
-r,,xUnknownBA,(konstant 0),,,,BA00,,,EXP,,,
-r,,xUnknownBB,(konstant 0),,,,BB00,,,EXP,,,
-r,,xUnknownBC,(konstant 0),,,,BC00,,,EXP,,,
-r,,xUnknownBD,(konstant 0),,,,BD00,,,EXP,,,
-r,,xUnknownBF,(konstant 0),,,,BF00,,,EXP,,,
 r,,xUnknownA5,(konstant 0),,,,A500,,,EXP,,,
 r,,xUnknownAB,(constant on),,,,AB00,,,onoff,,,
 r,,xUnknownAF,(konstant 0),,,,AF00,,,EXP,,,
@@ -204,8 +160,6 @@ r,,xUnknownD8,,,,,D800,,,HEX:*,,,
 r,,xUnknownD9,,,,,D900,,,HEX:*,,,
 r,,xUnknownDA,(konstant 01.01.2019),,,,DA00,,,date,,,
 r,,xUnknownDB,(konstant 01.01.2019),,,,DB00,,,date,,,
-r,,xUnknownDA,(konstant 01.01.2019),,,,DA00,,,date,,,
-r,,xUnknownDB,(konstant 01.01.2019),,,,DB00,,,date,,,
 r,,xUnknownDD,,,,,DD00,,,HEX:*,,,
 r,,xUnknownDE,,,,,DE00,,,HEX:*,,,
 r,,xUnknownDF,,,,,DF00,,,HEX:*,,,
@@ -222,7 +176,6 @@ r,,xUnknownEB,,,,,EB00,,,HEX:*,,,
 r,,xUnknownEC,,,,,EC00,,,HEX:*,,,
 r,,xUnknownED,,,,,ED00,,,HEX:*,,,
 r,,xUnknownEE,,,,,EE00,,,HEX:*,,,
-r,,xUnknownEF,(constant 20),,,,EF00,,,EXP,,,
 r,,xUnknownEF,(constant 20),,,,EF00,,,EXP,,,
 r,,xUnknownF0,,,,,F000,,,HEX:*,,,
 r,,xUnknownF1,,,,,F100,,,HEX:*,,,
@@ -255,7 +208,6 @@ r;w,,HwcHolidayStartDate,,,,,0900,,,hfrom,,,start date of holidays
 r;w,,HwcHolidayEndDate,,,,,0A00,,,hto,,,end date of holidays
 r;w,,HwcSFMode,HwcSFMode,,,,0D00,,,sfmode,,,valid are at least:auto/onedayaway/load
 r,,HwcUnknown0E,(constant 1),,,,0E00,,,onoff,,,
-r,,HwcUnknown0E,(constant 1),,,,0E00,,,onoff,,,
 r,,HwcStatus,,,,,0F00,,,zoneStatus,,,
 r;w,,HwcHolidayStartTime,,,,,1000,,,HTI,,,
 r;w,,HwcHolidayEndTime,,,,,1100,,,HTI,,,
@@ -272,7 +224,6 @@ r;w,,Hc1DewPointMonitoring,,,,,0500,,,onoff,,,Dew point monitoring enable/disabl
 r;w,,Hc1CoolingEnabled,,,,,0600,,,onoff,,,Cooling function enable/disable for Hc1
 r,,Hc1ActualFlowTempDesired,Actual Desired Flow Temperature Heating Circuit 1,,,,0700,,,tempv,,,current flow temperature setpoint of Hc1
 r,,Hc1FlowTemp,Flow Temperature Heating Circuit 1,,,,0800,,,tempv,,,current flow temperature of Hc1
-r;w,,Hc1ExtHwcTempDesired,Hc1 desired external HWC temperature,,,,0900,,,tempv,,,Hc1 desired external HWC temperature
 r;w,,Hc1ExtHwcTempDesired,Hc1 desired external HWC temperature,,,,0900,,,tempv,,,Hc1 desired external HWC temperature
 r;w,,Hc1DewPointOffset,Hc1 Temperature offset from dew point,,,,0A00,,,tempv,,,Dew point temperature margin for Hc1
 r;w,,Hc1ExcessTemp,ExcessTemp Heating Circuit 1,,,,0B00,,,calibrationv,,,excess temperature of Hc1 (flow temperature's setpoint is increased by this value to keep the mixing valve in its control range)
@@ -355,7 +306,6 @@ r;w,,Hc3SummerTempLimit,AT-Abschaltgrenze Heating Circuit 3,,,,1400,,,tempv,,,if
 r;w,,Hc3RoomTempMod,,,,,1500,,,rcmode2,,,room temperature modulation of Hc3
 r;w,,Hc3ScreedDryingDay,,,,,1600,,,UIN,,,current day of Hc3 screed drying schedule (1 to 29 0=screed drying off) 
 r,,Hc3ScreedDryingDesiredTemp,,,,,1700,,,tempv,,,current Hc3 screed drying desired temp
-r,,Hc3ExtHwcActive,,,,,1800,,,onoff,,,
 r,,Hc3ExtHeatDemand,,,,,1900,,,onoff,,,indicator of external heat demand for Hc3
 r,,Hc3MixerPosition,Mixer Position Heating Circuit 3,,,,1A00,,,EXP,,,"status of mixer (<0 closing, >0 opening)"
 r,,Hc3HeatCurveAdaption,Adaption of Heatcurve Heating Circuit 3,,,,1C00,,,EXP,,,adaption applied to heating curve of Hc3
@@ -382,7 +332,6 @@ r;w,,z1ValveStatus,Valve Status Zone 1,,,,1200,,,UCH,,,valve status of zone 1
 r;w,,z1RoomZoneMapping,Raumregler Zuordnung Zone 1,,,,1300,,,zmapping,,,configures which room temperature is assigned to zone 1
 r,,z1ActualHeatingRoomTempDesired,Actual Desired Heating Room Temperature Zone 1,,,,1400,,,tempv,,,current heating room setpoint considering all basic conditions passed to the control algorithms (0 = heating inactive)
 r,,z1ActualCoolingRoomTempDesired,Actual Desired Cooling Room Temperature Zone 1,,,,1500,,,tempv,,,current cooling room setpoint considering all basic conditions passed to the control algorithms (99 = cooling inactive)
-r;w,,z1Shortname,Shortname Zone 1,,,,1600,,,STR:*,,,short name of zone 1
 r;w,,z1Shortname,Shortname Zone 1,,,,1600,,,STR:*,,,short name of zone 1
 r;w,,z1Name1,Name Zone 1 Part 1,,,,1700,,,STR:*,,,name of zone 1
 r;w,,z1Name2,Name Zone 1 Part 2,,,,1800,,,STR:*,,,name of zone 1
@@ -427,9 +376,6 @@ r,,z2ActualCoolingRoomTempDesired,Actual Desired Cooling Room Temperature Zone 2
 r;w,,z2Shortname,Shortname Zone 2,,,,1600,,,STR:*,,,short name of zone 2
 r;w,,z2Name1,Name Zone 2 Part 1,,,,1700,,,STR:*,,,name of zone 2
 r;w,,z2Name2,Name Zone 2 Part 2,,,,1800,,,STR:*,,,name of zone 2
-r;w,,z2Shortname,Shortname Zone 2,,,,1600,,,STR:*,,,short name of zone 2
-r;w,,z2Name1,Name Zone 2 Part 1,,,,1700,,,STR:*,,,name of zone 2
-r;w,,z2Name2,Name Zone 2 Part 2,,,,1800,,,STR:*,,,name of zone 2
 r,,z2Status,,,,,1B00,,,zoneStatus,,,
 r,,z2QuickVetoEndTime,Quick Veto End Time Zone 2,,,,1E00,,,HTI,,,manual override end time for zone 2
 r;w,,z2HolidayEndTime,,,,,2000,,,HTI,,,end time of holidays for zone 2
@@ -456,9 +402,6 @@ r;w,,z3ValveStatus,Valve Status Zone 3,,,,1200,,,UCH,,,valve status of zone 3
 r;w,,z3RoomZoneMapping,Raumregler Zuordnung Zone 3,,,,1300,,,zmapping,,,configures which room temperature is assigned to zone 3
 r,,z3ActualHeatingRoomTempDesired,Actual Desired Heating Room Temperature Zone 3,,,,1400,,,tempv,,,current heating room setpoint considering all basic conditions passed to the control algorithms (0 = heating inactive)
 r,,z3ActualCoolingRoomTempDesired,Actual Desired Cooling Room Temperature Zone 3,,,,1500,,,tempv,,,current cooling room setpoint considering all basic conditions passed to the control algorithms (99 = cooling inactive)
-r;w,,z3Shortname,Shortname Zone 3,,,,1600,,,STR:*,,,short name of zone 3
-r;w,,z3Name1,Name Zone 3 Part 1,,,,1700,,,STR:*,,,name of zone 3
-r;w,,z3Name2,Name Zone 3 Part 2,,,,1800,,,STR:*,,,name of zone 3
 r;w,,z3Shortname,Shortname Zone 3,,,,1600,,,STR:*,,,short name of zone 3
 r;w,,z3Name1,Name Zone 3 Part 1,,,,1700,,,STR:*,,,name of zone 3
 r;w,,z3Name2,Name Zone 3 Part 2,,,,1800,,,STR:*,,,name of zone 3
