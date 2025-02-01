@@ -18,8 +18,6 @@ r;w,,GlobalSystemOff,Global System OFF,,,,0700,,,yesno,,,For switching system of
 r,,xUnknown08,(constant off),,,,0800,,,onoff,,,
 r,,xUnknown09,"(constant off, on in cooling mode)",,,,0900,,,onoff,,,
 r;w,,HwcParallelLoading,hwc parallel loading,,,,0A00,,,onoff,,,heating and hot water parallel
-r,,xUnknown0B,(constant 0),,,,0B00,,,SIN,,,
-r,,xUnknown0B,(constant 0),,,,0B00,,,SIN,,,
 r;w,,MaxRoomHumidity,max room humidity,,,,0E00,,,UIN,,,maximum room humidity
 r,,HybridManager,,,,,0F00,,,UCH,0=Trivalence (tariff based);1=Bivalence (Outside temperature based),,Tri/Bi-valence manager
 r,,TariffAuxHeater,,,,,1000,,,UIN,, ,Secondary heater tariff value
