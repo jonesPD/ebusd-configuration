@@ -21,7 +21,8 @@ r,,xUnknown09,"(constant off, on in cooling mode)",,,,0900,,,onoff,,,
 r;w,,HwcParallelLoading,hwc parallel loading,,,,0A00,,,onoff,,,heating and hot water parallel
 r;w,,MaxRoomHumidity,max room humidity,,,,0E00,,,UIN,,,maximum room humidity
 r,,HybridManager,,,,,0F00,,,UCH,0=Trivalence (tariff based);1=Bivalence (Outside temperature based),,Tri/Bi-valence manager
-r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,r,,TariffAuxHeater,,,,,1000,,,UIN,, ,Secondary heater tariff value
+r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,
+r,,TariffAuxHeater,,,,,1000,,,UIN,, ,Secondary heater tariff value
 *r,,,,,,B524,,,,,,,,,,,,,,,,,,,,,,,,,
 r,,TariffPrimHeaterLow,,,,,020000001100,tariff_type,,UCH,, ,Tariff levels,ignore,,IGN:3,,,,low_tariff,,UIN,,,Primary heater low tariff value 
 r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,
