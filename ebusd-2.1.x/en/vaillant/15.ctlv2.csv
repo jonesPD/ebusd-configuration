@@ -24,10 +24,10 @@ r,,HybridManager,,,,,0F00,,,UCH,0=Trivalence (tariff based);1=Bivalence (Outside
 r,,TariffAuxHeater,,,,,1000,,,UIN,, ,Secondary heater tariff value
 *r,,,,,,B524,,,,,,,,,,,,,,,,,,,,,,,,,
 r,,TariffPrimHeaterLow,,,,,020000001100,tariff_type,,UCH,, ,Tariff levels,ignore,,IGN:3,,,,low_tariff,,UIN,,,Primary heater low tariff value 
-r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,
 *r,,,,,,B524,02000000,,,IGN:4,,,
 *w,,,,,,B524,02010000,,,,,,
 r,,TariffPrimHeaterNormal,,,,,1200,,,UIN,, ,Primary heater normal tariff value
+r,,xUnknown13,"(constant 0, 2 in cooling mode)",,,,1300,,,UIN,,,
 r;w,,AdaptHeatCurve,adaptive heat curve,,,,1400,,,yesno,,,automatic correction of configured heat curve
 r,,xUnknown15,"(constant 0, on in cooling mode)",,,,1500,,,onoff,,,
 r;w,,HwcMaxChargeTime,maximale hot water charging time,,,,1700,,,minutes2,,,maximum cylinder charging time
