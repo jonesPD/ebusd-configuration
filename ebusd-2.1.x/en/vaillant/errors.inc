@@ -7,3 +7,4 @@ r,,currenterror,Current errors,,,,01,,,errors,,,,,,
 *wi,#install,,,,,"B503","02",,,,,,,,,
 r,,errorhistory,Error history,,,,01,index,m,UCH,,,,,,errorhistory
 wi,,clearerrorhistory,Clear error history,,,,01,cleared,s,yesno,,,,,,
+r,,statushistory,statushistory,,,,03,index,m,UCH,,,,,,statushistory

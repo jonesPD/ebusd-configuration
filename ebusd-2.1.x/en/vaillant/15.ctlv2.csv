@@ -36,7 +36,7 @@ r,,xUnknown25,(konstant 0),,,,2500,,,SIN,,,
 r,,HcEmergencyTemperature,,,,,2600,,,tempv,,,Emergency operation temperature
 r;w,,HwcChargeHysteresis,hysteresis cylinder charge,,,,2700,,,calibrationv,,,hysteris storage tank loading
 r;w,,HwcChargeOffset,offset cylinder charge,,,,2900,,,calibrationv,,,storage tank loading
-r;w,,HwcLegionellaTime,,,,,2A00,,,HTM,,,Time hot water legionella run is scheduled (when HwcLegionellaDay is not 0)
+r;w,,HwcLegionellaTime,,,,,2A00,,,HTI,,,Time (in hh:mm:ss) hot water legionella run is scheduled (when HwcLegionellaDay is not 0)
 r;w,,HwcLegionellaDay,,,,,2B00,,,daysel2,,,Day hot water legionella run is scheduled
 r;w,,MaintenanceDate,next maintenance,,,,2C00,,,date,,,date next maintenance
 r;w,,OffsetOutsideTemp,,,,,2D00,,,tempv,,K,Offset outside temperature (used to determined DisplayedOutsideTemp)
@@ -186,6 +186,42 @@ r,,xUnknownFB,(constant 10),,,,FB00,,,EXP,,,
 r,,xUnknownFC,(constant 62),,,,FC00,,,EXP,,,
 r,,xUnknownFE,(constant 13),,,,FE00,,,EXP,,,
 r,,xUnknownFF,(constant 25),,,,FF00,,,EXP,,,
+# ##### Room humidity #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000901,,,IGN:4,,,
+r,,RoomHumidity,room humidity shown by regulator,,,,0700,,,exp,,,room humidity shown by regulator
+r,,RoomTemp,room temperature shown by regulator,,,,0F00,,,exp,,,room temperature shown by regulator
+# ##### VR92 address 1 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a01,,,IGN:4,,,
+r,,VR92addr1RoomHumidity,room humidity shown by VR92 address 1,,,,0700,,,exp,,,room humidity shown by VR92 address 1
+r,,VR92addr1RoomTemp,room temperature shown by VR92 address 1,,,,0F00,,,exp,,,room temperature shown by VR92 address 1
+# ##### VR92 address 2 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a02,,,IGN:4,,,
+r,,VR92addr2RoomHumidity,room humidity shown by VR92 address 2,,,,0700,,,exp,,,room humidity shown by VR92 address 2
+r,,VR92addr2RoomTemp,room temperature shown by VR92 address 2,,,,0F00,,,exp,,,room temperature shown by VR92 address 2
+# ##### VR92 address 3 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a03,,,IGN:4,,,
+r,,VR92addr3RoomHumidity,room humidity shown by VR92 address 3,,,,0700,,,exp,,,room humidity shown by VR92 address 3
+r,,VR92addr3RoomTemp,room temperature shown by VR92 address 3,,,,0F00,,,exp,,,room temperature shown by VR92 address 3
+# ##### VR92 address 4 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a04,,,IGN:4,,,
+r,,VR92addr4RoomHumidity,room humidity shown by VR92 address 4,,,,0700,,,exp,,,room humidity shown by VR92 address 4
+r,,VR92addr4RoomTemp,room temperature shown by VR92 address 4,,,,0F00,,,exp,,,room temperature shown by VR92 address 4
+# ##### VR92 address 5 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a05,,,IGN:4,,,
+r,,VR92addr5RoomHumidity,room humidity shown by VR92 address 5,,,,0700,,,exp,,,room humidity shown by VR92 address 5
+r,,VR92addr5RoomTemp,room temperature shown by VR92 address 5,,,,0F00,,,exp,,,room temperature shown by VR92 address 5
+# ##### VR92 address 6 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a06,,,IGN:4,,,
+r,,VR92addr6RoomHumidity,room humidity shown by VR92 address 6,,,,0700,,,exp,,,room humidity shown by VR92 address 6
+r,,VR92addr6RoomTemp,room temperature shown by VR92 address 6,,,,0F00,,,exp,,,room temperature shown by VR92 address 6
+# ##### VR92 address 7 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a07,,,IGN:4,,,
+r,,VR92addr7RoomHumidity,room humidity shown by VR92 address 7,,,,0700,,,exp,,,room humidity shown by VR92 address 7
+r,,VR92addr7RoomTemp,room temperature shown by VR92 address 7,,,,0F00,,,exp,,,room temperature shown by VR92 address 7
+# ##### VR92 address 8 #####,,,,,,,,,,,,,
+*r,,,,,,B524,06000a08,,,IGN:4,,,
+r,,VR92addr8RoomHumidity,room humidity shown by VR92 address 8,,,,0700,,,exp,,,room humidity shown by VR92 address 8
+r,,VR92addr8RoomTemp,room temperature shown by VR92 address 8,,,,0F00,,,exp,,,room temperature shown by VR92 address 8
 # ##### hot water circuit #####,,,,,,,,,,,,,
 *r,,,,,,B524,02000100,,,IGN:4,,,
 *w,,,,,,B524,02010100,,,,,,
@@ -318,15 +354,15 @@ r;w,,z1SFMode,SFMode Zone 1,,,,0E00,,,sfmode,,,modes 2=party 4=onedayaway 5=oned
 r,,z1RoomTemp,Actual Room Temperature Zone 1,,,,0F00,,,tempv,,,aktuelle Raumtemperatur in Zone 1
 r,,z1Unknown10,,,,,1000,,,HEX:*,,,
 r,,z1Unknown11,,,,,1100,,,HEX:*,,,
-r;w,,z1ValveStatus,Valve Status Zone 1,,,,1200,,,UCH,,,valve status of zone 1
+r;w,,z1ValveStatus,Valve Status Zone 1,,,,1200,,,UCH,,,valve status of zone 1 (0 when off 1 when active)
 r;w,,z1RoomZoneMapping,Raumregler Zuordnung Zone 1,,,,1300,,,zmapping,,,configures which room temperature is assigned to zone 1
 r,,z1ActualHeatingRoomTempDesired,Actual Desired Heating Room Temperature Zone 1,,,,1400,,,tempv,,,current heating room setpoint considering all basic conditions passed to the control algorithms (0 = heating inactive)
 r,,z1ActualCoolingRoomTempDesired,Actual Desired Cooling Room Temperature Zone 1,,,,1500,,,tempv,,,current cooling room setpoint considering all basic conditions passed to the control algorithms (99 = cooling inactive)
 r;w,,z1Shortname,Shortname Zone 1,,,,1600,,,STR:*,,,short name of zone 1
 r;w,,z1Name1,Name Zone 1 Part 1,,,,1700,,,STR:*,,,name of zone 1
 r;w,,z1Name2,Name Zone 1 Part 2,,,,1800,,,STR:*,,,name of zone 1
-r,,z1Unknown19,,,,,1900,,,HEX:*,,,
-r,,z1Unknown1A,,,,,1A00,,,HEX:*,,,
+r,,z1HTimeSlotActive,,,,,1900,,,yesno,,,yes while in Heating Time Controlled window
+r,,z1CTimeSlotActive,,,,,1A00,,,yesno,,,yes while in Cooling Time Controlled window
 r,,z1Status,,,,,1B00,,,zoneStatus,,,
 r,,z1Unknown1C,,,,,1C00,,,HEX:*,,,
 r,,z1QuickVetoEndTime,Quick Veto End Time Zone 1,,,,1E00,,,HTI,,,manual override end time for zone 1
@@ -343,7 +379,7 @@ r,,z1Unknown29,,,,,2900,,,HEX:*,,,
 r,,z1Unknown2A,,,,,2A00,,,HEX:*,,,
 r,,z1Unknown2B,,,,,2B00,,,HEX:*,,,
 r,,z1Unknown2C,,,,,2C00,,,HEX:*,,,
-r,,z1Unknown2D,,,,,2D00,,,HEX:*,,,
+r,,z1Unknown2D,,,,,2D00,,,HEX:*,,,1 when off 0 during time controlled period and HP active (and 1 during time controlled period and HP inactive)
 r,,z1Unknown2E,,,,,2E00,,,HEX:*,,,
 # only 'invalid position' messages for higher registers
 # ##### zone 2 #####,,,,,,,,,,,,,
@@ -366,6 +402,8 @@ r,,z2ActualCoolingRoomTempDesired,Actual Desired Cooling Room Temperature Zone 2
 r;w,,z2Shortname,Shortname Zone 2,,,,1600,,,STR:*,,,short name of zone 2
 r;w,,z2Name1,Name Zone 2 Part 1,,,,1700,,,STR:*,,,name of zone 2
 r;w,,z2Name2,Name Zone 2 Part 2,,,,1800,,,STR:*,,,name of zone 2
+r,,z2HTimeSlotActive,,,,,1900,,,yesno,,,yes while in Heating Time Controlled window
+r,,z2CTimeSlotActive,,,,,1A00,,,yesno,,,yes while in Cooling Time Controlled window
 r,,z2Status,,,,,1B00,,,zoneStatus,,,
 r,,z2QuickVetoEndTime,Quick Veto End Time Zone 2,,,,1E00,,,HTI,,,manual override end time for zone 2
 r;w,,z2HolidayEndTime,,,,,2000,,,HTI,,,end time of holidays for zone 2
@@ -395,6 +433,8 @@ r,,z3ActualCoolingRoomTempDesired,Actual Desired Cooling Room Temperature Zone 3
 r;w,,z3Shortname,Shortname Zone 3,,,,1600,,,STR:*,,,short name of zone 3
 r;w,,z3Name1,Name Zone 3 Part 1,,,,1700,,,STR:*,,,name of zone 3
 r;w,,z3Name2,Name Zone 3 Part 2,,,,1800,,,STR:*,,,name of zone 3
+r,,z3HTimeSlotActive,,,,,1900,,,yesno,,,yes while in Heating Time Controlled window
+r,,z3CTimeSlotActive,,,,,1A00,,,yesno,,,yes while in Cooling Time Controlled window
 r,,z3Status,,,,,1B00,,,zoneStatus,,,
 r,,z3QuickVetoEndTime,Quick Veto End Time Zone 3,,,,1E00,,,HTI,,,manual override end time for zone 3
 r;w,,z3HolidayEndTime,,,,,2000,,,HTI,,,end time of holidays for zone 3

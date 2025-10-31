@@ -7,12 +7,14 @@ pressv,EXP,,bar,pressure
 press10,UCH,10,bar,pressure
 flowrate,UIN,,l/h,flow rate
 date,HDA:3,,,date
+date2,BDA:3,,,date
 day,BDY,,,weekday
 daysel,UCH,0=selected;1=Mo-Fr;2=Sa-Su;3=Mo-Su,,days
 daysel2,UCH,0=off;1=Mon;2=Tue;3=Wed;4=Thu;5=Fri;6=Sat;7=Sun;8=Daily,,days
 days,UCH,,,days
 time,VTI,,,time
 time2,VTM,,,time
+time3,BTM,,,time
 minutes,ULG,120,min,minutes
 minutes0,UCH,,min,minutes
 minutes2,UIN,,min,minutes
@@ -61,7 +63,7 @@ phase,phase1;phase2;phase3,,,
 code,PIN,,,
 error,UIN,,,error number
 errors,error;error;error;error;error,,,
-errorhistory,status;time2;date;error,,,
+errorhistory,status;time3;date2;error,,,
 from,TTM,,,from
 to,TTM,,,to
 slot1,from;to,,,slot 1 from/to
@@ -122,3 +124,5 @@ scode,UIN,34=Frost protection;100=Standby;101=Heating: Compressor shutdown;102=H
 hcpumpstate,UCH,0=off;1=heating;2=cooling;3=exthwc
 powerv,EXP,,W,
 state07heatermode,UCH,0x00=standby;0x01=standby;0x0a=error;0x0b=error;0x08=hc;0x09=hc;0x10=cool;0x11=cool;0x80=dhw;0x81=dhw,,
+statushistory,status;time3;date2;scode,,,
+
